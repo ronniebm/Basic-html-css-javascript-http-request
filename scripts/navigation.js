@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const menuBtn = document.querySelector('.js-burger');
   const header = document.querySelector('.js-header');
-  const navRow = document.querySelector('.js-nav-row');
 
 
   // listen for burger button click
@@ -20,13 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
         header.classList.remove('header--active');
         menuActive = true;
       }
-      navRow.classList.remove('justify-content-center');
     } else {
       if (menuActive) {
         header.classList.add('header--active');
         menuActive = false;
       }
-      navRow.classList.add('justify-content-center');
     }
   });
 
