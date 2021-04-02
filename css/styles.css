@@ -287,7 +287,7 @@
     display: block;
     position: absolute;
     right: 5%;
-    top: 38%;
+    top: 34.5%;
   }
   .form__results .results {
     color: #869AB8;
@@ -459,6 +459,7 @@
 
 .not-found {
   height: fit-content;
+  position: relative;
 }
 
 .not-found__text {
@@ -503,6 +504,11 @@
   color: white;
   border: none;
   border-radius: 6px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 17px;
+  line-height: 26px;
+  cursor: pointer;
 }
 
 .not-found__image {
@@ -512,6 +518,166 @@
   background-repeat: no-repeat;
   background-size: 260px;
   background-position-x: center;
+}
+
+.more-info__row {
+  display: flex;
+  justify-content: center;
+}
+
+.more-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-info__title {
+  width: 99.4%;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 33px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #161C2D;
+}
+
+.more-info__summary {
+  margin-top: 23px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 17px;
+  line-height: 32px;
+  text-align: center;
+  color: #506690;
+}
+
+.more-info__user-container {
+  width: 98%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.more-info__user-container__data {
+  display: flex;
+  align-items: center;
+}
+
+.more-info__user-container__data__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 12px;
+  background-image: url(https://www.placeimg.com/36/36);
+}
+
+.more-info__user-container__data__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.more-info__user-container__data__name {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #161C2D;
+}
+
+.more-info__user-container__data__publish, .more-info__user-container__data__date {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 9px;
+  line-height: 14px;
+  color: #506690;
+  opacity: 0.7;
+}
+
+.more-info__user-container__social {
+  margin-top: 20px;
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.more-info__user-container__social__share {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 14px;
+  color: #869AB8;
+}
+
+.more-info__image {
+  width: 98%;
+  height: 395px;
+  margin-top: 45px;
+  border-radius: 5px;
+  background-image: url(https://placeimg.com/680/395);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more-info__caption {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 23px;
+  color: #869AB8;
+}
+
+.more-info__paragraph {
+  width: 98%;
+  margin-top: 36px;
+  margin-bottom: 50px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 17px;
+  line-height: 26px;
+  color: #161C2D;
+}
+
+@media only screen and (min-width: 500px) {
+  .more-info__title {
+    font-size: 43px;
+  }
+  .more-info__summary {
+    font-size: 21px;
+  }
+  .more-info__user-container {
+    flex-direction: row;
+    margin-top: 65px;
+  }
+  .more-info__user-container__data__name {
+    font-size: 12px;
+  }
+  .more-info__user-container__data__publish, .more-info__user-container__data__date {
+    font-size: 12px;
+  }
+  .more-info__user-container__social {
+    margin-top: 0;
+  }
+  .more-info__user-container__social__share {
+    font-size: 12px;
+  }
+  .more-info__image {
+    margin-top: 75px;
+  }
+  .more-info__caption {
+    font-size: 15px;
+  }
+  .more-info__paragraph {
+    font-size: 17px;
+    margin-top: 66px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -641,5 +807,26 @@
   }
   .card:nth-child(odd) {
     margin-right: 0;
+  }
+  .not-found {
+    height: 563px;
+  }
+  .not-found__text {
+    position: absolute;
+    margin-top: 160px;
+    width: fit-content;
+    right: 65%;
+    transform: translateY(50%);
+  }
+  .not-found__info {
+    width: 300px;
+  }
+  .not-found__image {
+    position: absolute;
+    margin-top: 160px;
+    width: 590px;
+    height: 380px;
+    background-size: 590px;
+    right: 0;
   }
 }

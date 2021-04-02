@@ -135,6 +135,7 @@
 
 .not-found {
   height: fit-content;
+  position: relative;
   &__text {
     display: flex;
     flex-direction: column;
@@ -173,6 +174,11 @@
     color: white;
     border: none;
     border-radius: 6px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 26px;
+    cursor: pointer;
   }
   &__image {
     margin-top: 20px;
@@ -182,6 +188,160 @@
     background-size: 260px;
     background-position-x: center;
   }
+}
+
+.more-info {
+  &__row {
+    display: flex;
+    justify-content: center;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    width: 99.4%;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 33px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $black;
+  }
+  &__summary {
+    margin-top: 23px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 32px;
+    text-align: center;
+    color: $gray-700;
+  }
+  &__user-container {
+    width: 98%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__data {
+      display: flex;
+      align-items: center;
+      &__avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin-right: 12px;
+        background-image: url(https://www.placeimg.com/36/36);
+      }
+      &__data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      &__name {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: $black;
+      }
+      &__publish, &__date {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 9px;
+        line-height: 14px;
+        color: $gray-700;
+        opacity: 0.7;
+      }
+    }
+    &__social {
+      margin-top: 20px;
+      width: 160px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__share {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 12px;
+        line-height: 14px;
+        color: $gray-600;
+      }
+    }
+  }
+  &__image {
+    width: 98%;
+    height: 395px; //temporal mientras ajustamos
+    margin-top: 45px;
+    border-radius: 5px;
+    background-image: url(https://placeimg.com/680/395);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__caption {
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 23px;
+    color: $gray-600;
+  }
+  &__paragraph {
+    width: 98%;
+    margin-top: 36px;
+    margin-bottom: 50px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 26px;
+    color: $black;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+
+  .more-info {
+    &__title {
+      font-size: 43px;
+    }
+    &__summary {
+      font-size: 21px;
+    }
+    &__user-container {
+      flex-direction: row;
+      margin-top: 65px;
+      &__data {
+        &__name {
+          font-size: 12px;
+        }
+        &__publish, &__date {
+          font-size: 12px;
+        }
+      }
+      &__social {
+        margin-top: 0;
+        &__share {
+          font-size: 12px;
+        }
+      }
+    }
+    &__image {
+      margin-top: 75px;
+    }
+    &__caption {
+      font-size: 15px;
+    }
+    &__paragraph {
+      font-size: 17px;
+      margin-top: 66px;
+    }
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -319,6 +479,28 @@
     margin-left: 0;
     &:nth-child(odd) {
       margin-right: 0;
+    }
+  }
+
+  .not-found {
+    height: 563px;
+    &__text {
+      position: absolute;
+      margin-top: 160px;
+      width: fit-content;
+      right: 65%;
+      transform: translateY(50%);
+    }
+    &__info {
+      width: 300px;
+    }
+    &__image {
+      position: absolute;
+      margin-top: 160px;
+      width: 590px;
+      height: 380px;
+      background-size: 590px;
+      right: 0;
     }
   }
 
