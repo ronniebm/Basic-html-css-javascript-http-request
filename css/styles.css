@@ -30,7 +30,6 @@
 
 .body {
   background-color: #E5E5E5;
-  width: 100vw;
   height: 100vh;
 }
 
@@ -424,7 +423,8 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-image: url(https://placeimg.com/300/150);
+  background-image: url(https://placeimg.com/30/30);
+  background-repeat: none;
 }
 
 .card-footer__name {
@@ -519,7 +519,7 @@
 .not-found__image {
   margin-top: 20px;
   height: 200px;
-  background-image: url(../img/notfound.png);
+  background-image: url(../../img/notfound.png);
   background-repeat: no-repeat;
   background-size: 260px;
   background-position-x: center;
@@ -862,6 +862,9 @@
     margin-left: 0;
   }
   .card:nth-child(odd) {
+    margin-right: 0;
+  }
+  .card:nth-child(even) {
     margin-right: 0;
   }
   .not-found {
