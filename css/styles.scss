@@ -2,3 +2,324 @@
 @import './base/_base';
 @import './common/_navbar';
 
+.col-wrap {
+  width: auto;
+}
+
+.cards-container {
+  margin-top: 90px;
+  // background: red;
+  // position: fixed;
+  &__wrapper {
+    width: auto;
+  }
+  .card-wrapper {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    // background-color: blue;
+  }
+}
+
+.card {
+  height: 390px;
+  box-shadow: 0px 24px 64px rgba(22, 27, 45, 0.05);
+  margin: 0px 10px 33px 10px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.card-top {
+  position: relative;
+  height: 205.59px;
+  background-image: url(https://placeimg.com/300/150);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px 8px 0px 0px;
+  clip-path: polygon(82% 91%, 64% 95%, 46% 97%, 30% 98%, 16% 98%, 0 97%, 0 0, 100% 0, 100% 85%);
+  height: 45%;
+  &__star {
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    cursor: pointer;
+  }
+  &__price {
+    position: absolute;
+    top: 18px;
+    left: 13px;
+    padding: 5px;
+    border-radius: 20px;
+    width: 80px;
+    height: 21px;
+    text-align: center;
+    line-height: 23px;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    background-color: tomato;
+  }
+}
+
+.card-bottom {
+  padding: 0px 40px 0px 25.71px;
+  margin-top: 31.41px;
+  height: 150px;
+  &__title {
+    color: $black;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+  }
+  &__text {
+    margin-top: 8px;
+    color: $gray-650;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24,37px;
+    height: 130px;
+  }
+}
+
+.card-footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 65px;
+  &__author {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+  }
+  &__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url(https://placeimg.com/300/150);
+  }
+  &__name {
+    margin-left: 10px;
+    color: $gray-650;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+  &__date {
+    position: absolute;
+    right: 0;
+    color: $gray-650;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+  &::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: rgb(240, 240, 240);
+    transform: translateY(-30px);
+  }
+}
+
+.not-found {
+  height: fit-content;
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__tittle {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 61px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  &__info {
+    color: $gray-650;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__button-container {
+    width: fit-content;
+  }
+  &__button {
+    width: 153px;
+    height: 50px;
+    background-color: $primary;
+    color: white;
+    border: none;
+    border-radius: 6px;
+  }
+  &__image {
+    margin-top: 20px;
+    height: 200px;
+    background-image: url(../img/notfound.png);
+    background-repeat: no-repeat;
+    background-size: 260px;
+    background-position-x: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  
+  .card:nth-child(odd) {
+    margin-right: 50px;
+  }
+
+  .card {
+    height: 490px;
+    box-shadow: 0px 24px 64px rgba(22, 27, 45, 0.05);
+    margin: 20px 10px 33px 10px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .card-top {
+    position: relative;
+    height: 205.59px;
+    background-image: url(https://placeimg.com/300/150);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px 8px 0px 0px;
+    clip-path: polygon(82% 91%, 64% 95%, 46% 97%, 30% 98%, 16% 98%, 0 97%, 0 0, 100% 0, 100% 85%);
+    height: 45%;
+    &__star {
+      position: absolute;
+      top: 16px;
+      right: 13px;
+      cursor: pointer;
+    }
+    &__price {
+      position: absolute;
+      top: 18px;
+      left: 13px;
+      padding: 5px;
+      border-radius: 20px;
+      width: 80px;
+      height: 21px;
+      text-align: center;
+      line-height: 23px;
+      color: white;
+      font-size: 12px;
+      font-weight: 900;
+      background-color: tomato;
+    }
+  }
+  
+  .card-bottom {
+    padding: 0px 40px 0px 25.71px;
+    margin-top: 31.41px;
+    height: 150px;
+    &__title {
+      color: $black;
+      font-style: normal;
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 28px;
+      letter-spacing: -0.01em;
+    }
+    &__text {
+      margin-top: 8px;
+      color: $gray-650;
+      font-style: normal;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24,37px;
+      height: 130px;
+    }
+  }
+  
+  .card-footer {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 65px;
+    &__author {
+      position: absolute;
+      left: 0;
+      display: flex;
+      align-items: center;
+    }
+    &__avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-image: url(https://placeimg.com/300/150);
+    }
+    &__name {
+      margin-left: 10px;
+      color: $gray-650;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    &__date {
+      position: absolute;
+      right: 0;
+      color: $gray-650;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: rgb(240, 240, 240);
+      transform: translateY(-35px);
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .cards-container {
+    margin-top: 200px;
+    .card-wrapper {
+      justify-content: space-between;
+    }
+  
+  }
+
+  .card {
+    width: 29%;
+    margin-left: 0;
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+  }
+
+}
