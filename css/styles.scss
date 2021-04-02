@@ -136,6 +136,8 @@
 .not-found {
   height: fit-content;
   position: relative;
+  margin-top: 0px;
+  margin-bottom: 50px;
   &__text {
     display: flex;
     flex-direction: column;
@@ -151,6 +153,7 @@
     text-align: center;
     letter-spacing: -0.01em;
     margin-bottom: 6px;
+    color: $black-blue;
   }
   &__info {
     color: $gray-650;
@@ -194,6 +197,7 @@
   &__row {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
   }
   &__wrapper {
     display: flex;
@@ -251,6 +255,7 @@
         color: $black;
       }
       &__publish, &__date {
+        margin-top: 4px;
         font-style: normal;
         font-weight: 900;
         font-size: 9px;
@@ -294,12 +299,55 @@
   &__paragraph {
     width: 98%;
     margin-top: 36px;
-    margin-bottom: 50px;
     font-style: normal;
     font-weight: 900;
     font-size: 17px;
     line-height: 26px;
     color: $black;
+  }
+}
+
+.load-more {
+  margin-top: 95px;
+  margin-bottom: 90px;
+  &__container {
+    padding: 0;
+  }
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__link {
+      text-decoration: none;
+      width: 100%;
+      position: relative;
+    }
+    &__text {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $gray-500;
+      box-sizing: border-box;
+      border-radius: 6px;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 17px;
+      line-height: 26px;
+      align-items: center;
+      text-align: center;
+      color: $primary;
+    }
+    &__icon {
+      position: absolute;
+      right: 25px;
+      top: 19px;
+    }
   }
 }
 
@@ -502,6 +550,10 @@
       background-size: 590px;
       right: 0;
     }
+  }
+
+  .more-info {
+    margin-top: -30px;
   }
 
 }
