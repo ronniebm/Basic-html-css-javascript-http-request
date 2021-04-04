@@ -1,7 +1,12 @@
 export {moreInfo};
 
 // Load more button section.
-let moreInfo = function() {
+let moreInfo = function({id=null, createdAt, name, title, description, rate, avatar, coverUrl}) {
+
+  var date = new Date(createdAt);
+  var month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+              "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"][date.getMonth()];
+  var day = date.getDate().toString().length > 1 ? date.getDate : `0${date.getDate()}`;
 
   return `
     <div class="col-12 pad-0 more-info">
@@ -9,15 +14,15 @@ let moreInfo = function() {
       <div class="row more-info__row">
     
         <div class="col-12 col-md-9 col-lg-8 col-xl-8 col-xxl-9 pad-0 more-info__wrapper">
-          <h2 class="more-info__title">Should I work remotely or will it put a strain on my long-term career?</h2>
-          <p class="more-info__summary">As part of our ongoing effort to enhance the traveler journey, we’re proud to partner with Portland International Airport (PDX) on the launch of a pilot program designed to shorten rider wait times at pickup.</p>
+          <h2 class="more-info__title">${title}</h2>
+          <p class="more-info__summary">${description}</p>
           
           <div class="more-info__user-container">
             <div class="more-info__user-container__data">
-              <div class="more-info__user-container__data__avatar"></div>
+              <div class="more-info__user-container__data__avatar" src="${avatar}"></div>
               <div class="more-info__user-container__data__data">
-                <p class="more-info__user-container__data__name">Alice Cooper</p>
-                <p class="more-info__user-container__data__publish">Published on <span class="more-info__user-container__wrapper__date">May 20, 2019</span></p>
+                <p class="more-info__user-container__data__name">${name}</p>
+                <p class="more-info__user-container__data__publish">Published on <span class="more-info__user-container__wrapper__date">${month} ${day}</span></p>
               </div>
             </div>
             <div class="more-info__user-container__social">
