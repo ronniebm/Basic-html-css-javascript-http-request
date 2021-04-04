@@ -35,14 +35,13 @@
                       <li class="nav__li"><a class="nav__a" href="#"><div class="nav__link">Articles</div></a></li>
                       <li class="nav__li"><a class="nav__a" href="#"><div class="nav__link">Favorites</div></a></li>
                     </ul>
-                    <form class="form" action="">
+                    <form class="form" onsubmit="return false">
                       <svg class="form__icon" width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.708 15.042a6.333 6.333 0 100-12.667 6.333 6.333 0 000 12.667zM16.625 16.625l-3.444-3.444" stroke="#869AB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                      <input class="form__input"  type="text" placeholder="Search" aria-label="First name">
+                      <input class="form__input js-search-text"  type="text" placeholder="Search" aria-label="First name">
                       <div class="form__results">
-                        <span class="results num-results js-num-results">133</span>
-                        <span class="results text-results">RESULTS</span>
+                        <span class="results num-results js-search-results"></span>
                       </div>
-                      <input class="form__button" type="submit" value="Search">
+                      <input class="form__button js-search-button" type="submit" value="Search">
                     </form>
                   </div>
                 </div>
@@ -74,7 +73,8 @@
     </div>
   </section>
   
-<script rel="preload dns-prefetch" src="./scripts/navigation.js"></script>
-<script rel="preload dns-prefetch" src="./scripts/api_request.js"></script>
+<script type="module" rel="preload dns-prefetch" src="./scripts/navigation.js"></script>
+<script type="module" rel="preload dns-prefetch" src="./scripts/api_request.js"></script>
+<script type="module" rel="preload dns-prefetch" src="./scripts/components/card.js"></script>
 </body>
 </html>

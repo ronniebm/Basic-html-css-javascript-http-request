@@ -1,40 +1,67 @@
+import { card } from './components/card.js';
+import { loadMore } from './components/load-more.js';
+import { notFound } from './components/not-found.js';
+import { moreInfo } from './components/more-info.js';
+
+// let myCards = [];
+let counter = 0;
+console.log(counter);
+
 // The <div> container where cards will be rendered.
 let container = document.querySelector(".js-cards-container");
 
-function renderCard() {
+// setting vars for search input field.
+let searchText = document.querySelector(".js-search-text");
+let showMatchNumber = document.querySelector('.js-search-results');
+let searchButton = document.querySelector(".js-search-button");
+
+// function: makes a GET request to API -------------------------------
+function getUsers() {
+
+  const params = new URLSearchParams({search: `${searchText.value}`});
+  const url = `https://5cf93b05e3c79f001439b581.mockapi.io/articles?${params}`;
+
+  return fetch(url).then(res => res.json());
+}
+
+
+
+searchButton.addEventListener('click', () => {
+
+  getUsers()
   
-  return card = `
-  <div class="container card-wrapper">
-              <div class="row">
-                <div class="col-12 col-md-3 pad-0">
-                  <div class="card">
+  .then(val => {
 
-                    <div class="card-top">
-                      <img class="card-top__img" src="http://placeimg.com/300/150" alt="background">
-                      <span class="card-top__price" style="background: light-gray">$80/MO</span>
-                    </div>
-                
-                    <div class="card-bottom">
-                      <h2 class="card-bottom__title">Titulo principal</h2>
-                      <p class="card-bottom__text">Descripcion de la tarjeta, se muestra en esta sección.</p>
-                
-                      <div class="card-footer">
-                        <div class="card-footer__author">
-                          <img class="card-footer__avatar" src="http://placeimg.com/300/150" alt="">
-                          <span class="card-footer__name">Pedro Perez</span>
-                        </div>
-                
-                        <span class="card-footer__date">MAY 03</span>
-                      </div>
-                    </div>
-                
-                  </div>
-                </div>
-              </div>
-            </div>
-  `
-;}
+    counter = 0;
+    showMatchNumber.textContent = '';
 
-// let total = '';
-// total += renderCard();
-// total += renderCard();
+    if (val.length == 0) {
+      container.innerHTML = notFound();
+      return;
+    }
+
+    let total = '';
+    showMatchNumber.textContent = `${val.length} RESULTS`;
+
+    val.forEach(data => {
+
+      if (counter <= 5) {
+        total += card(data);
+      }
+      counter += 1;
+      console.log(counter);
+    });
+
+    if (counter > 6) {
+      total += loadMore();
+    }
+
+    container.innerHTML = total;
+  
+  })
+
+  .catch(msg => {console.log(msg)});
+
+  console.log(`Funciona el click, recibí esto: ${searchText.value}`);
+
+});
