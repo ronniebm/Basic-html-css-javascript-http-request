@@ -94,6 +94,7 @@ function apiGetRequest() {
 
 }
 
+// function: is the card marked as favorite?.
 function isFavorite(string, dict, num) {
 
   if (dict.hasOwnProperty(`id${num}`)) {
