@@ -41,7 +41,6 @@
 .card-top {
   position: relative;
   height: 205.59px;
-  background-image: url(https://placeimg.com/300/150);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 8px 8px 0px 0px;
@@ -51,7 +50,8 @@
     position: absolute;
     top: 16px;
     right: 13px;
-    cursor: pointer;
+    // cursor: pointer;
+    z-index: 30;
   }
   &__price {
     position: absolute;
@@ -109,8 +109,8 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-image: url(https://placeimg.com/30/30);
     background-repeat: none;
+    background-size: contain;
   }
   &__name {
     margin-left: 10px;
@@ -248,7 +248,7 @@
         height: 36px;
         border-radius: 50%;
         margin-right: 12px;
-        background-image: url(https://www.placeimg.com/36/36);
+        background-size: contain;
       }
       &__data {
         display: flex;
@@ -294,7 +294,6 @@
     height: 395px; //temporal mientras ajustamos
     margin-top: 45px;
     border-radius: 5px;
-    background-image: url(https://placeimg.com/680/395);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -419,7 +418,6 @@
   .card-top {
     position: relative;
     height: 205.59px;
-    background-image: url(https://placeimg.com/300/150);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 8px 8px 0px 0px;
@@ -487,7 +485,6 @@
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      background-image: url(https://placeimg.com/300/150);
     }
     &__name {
       margin-left: 10px;
